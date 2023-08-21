@@ -28,6 +28,7 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
           scope: '@loonfactory'
+      - run: npm ci
       - name: Typesciprt build
         run: npm run build
       - name: Move dependency files
