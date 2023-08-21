@@ -18,7 +18,9 @@
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
     "outDir": "dist",
-    "declaration": true,
-    "resolveJsonModule": true,
+    "declaration": true
   },
+  "include": [
+    "src"
+  ]
 }
