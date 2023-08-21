@@ -1,0 +1,27 @@
+{
+  "name": "@loonfactory/common",
+  "version": "0.0.0",
+  "description": "A set of methods mainly used by loonfactory users.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loonfactory/npm-common.git"
+  },
+  "keywords": [
+    "common"
+  ],
+  "author": "loonfactory",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loonfactory/npm-common/issues"
+  },
+  "homepage": "https://github.com/loonfactory/npm-common#readme",
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "typescript": "^5.1.6"
+  }
+}
