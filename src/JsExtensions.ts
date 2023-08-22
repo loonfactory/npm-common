@@ -1,3 +1,14 @@
+/**
+ * 
+ * ***********************************************************************************
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   WARNING   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ *
+ * If you use this extension, it means you are not following the JavaScript standard. 
+ * The damages resulting from this can only be used by those who agree to bear it.
+ * 
+ * ***********************************************************************************
+ */
+
 type WhiteSpaceLetter = ' ' | '\r' | '\n' | '\t';
 
 declare global {
