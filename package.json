@@ -1,6 +1,6 @@
 {
   "name": "@loonfactory/common",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A set of methods mainly used by loonfactory users.",
   "main": "index.js",
   "scripts": {
