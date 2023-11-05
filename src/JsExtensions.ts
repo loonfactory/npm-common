@@ -19,18 +19,20 @@ declare global {
 
   interface Array<T> {
     take: (n: number) => T[];
+    skip: (n: number) => T[];
     last: () => T;
     first: () => T;
     any: () => boolean;
-    single: () => boolean;
+    single: () => T;
   }
 
   interface ReadonlyArray<T> {
     take: (n: number) => T[];
+    skip: (n: number) => T[];
     last: () => T;
     first: () => T;
     any: () => boolean;
-    single: () => boolean;
+    single: () => T;
   }
 }
 
@@ -106,11 +108,25 @@ if (!Array.prototype.take) {
   });
 }
 
+if (!Array.prototype.skip) {
+  // eslint-disable-next-line
+  Object.defineProperty(Array.prototype, 'skip', {
+    value: function (n: number) {
+      return (this as Array<any>).slice(n);
+    },
+    writable: false,
+  });
+}
+
 if (!Array.prototype.single) {
   // eslint-disable-next-line
   Object.defineProperty(Array.prototype, 'single', {
     value: function () {
-      return (this as Array<any>).length === 1;
+      if ((this as Array<any>).length === 1) {
+        return this[0];
+      }
+
+      return undefined;
     },
     writable: false,
   });
